@@ -10,7 +10,7 @@ role: 0,
   },
   onStart: async ({ message, args }) => {
     if (!args[0]) return message.reply("please add a title");
-message.reply(`Downloading... "${args[0]}" please wait..`);
+message.reply(`Downloading... "${args.join(" ")}" please wait..`);
     try {
       const { metadata: {title, releaseDate }, link } = await spotify(args[0]);
       message.reply({
