@@ -1,4 +1,4 @@
- const axios = require("axios");
+const axios = require("axios");
 
 module.exports = {
   config: {
@@ -13,7 +13,7 @@ module.exports = {
     try {
       const type = args[0]?.toLowerCase();
       if (!type || !['music', 'video'].includes(type)) {
-        return message.reply(`Invalid usage. Please use: ${pr} music or video <title>\n\nexample ${pr} music metamorphosis`);
+        return message.reply(`Invalid usage.\nPlease use: ${pr} music or video <title>\n\nexample ${pr} music metamorphosis`);
       }
       const title = args.slice(1).join(" ");
       if (!title) return message.reply("Please add title");
