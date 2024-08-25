@@ -25,7 +25,7 @@ var ms = Date.now();
   for (const model of models) {
     try {
       const { data } = await axios.post("https://api-v1-3ciz.onrender.com/ai", { model, prompt });
-  return `${data.result}\n\nModel used: ${model}\nResponse time: ${((Date.now() - ms) / 1000).toFixed(2)} ${(((Date.now() - ms) / 1000).toFixed(2) === '1.00') ? 'second' : 'seconds'}`;
+  return `${data.result}\n`/*\nModel used: ${model}\nResponse time: ${((Date.now() - ms) / 1000).toFixed(2)} ${(((Date.now() - ms) / 1000).toFixed(2) === '1.00') ? 'second' : 'seconds'}`*/;
     } catch (e) {
    errors.push(`Model ${model} error: ${e.response ? JSON.stringify(e.response.data, null, 2) : e.message}`);
     }
