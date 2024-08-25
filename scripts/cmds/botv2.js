@@ -1,4 +1,4 @@
- var noPrefix = [ "ai"]; //u can add more command with no prefix here
+ var noPrefix = [/* "ai"*/]; //u can add more command with no prefix here
 var  prefix = "?"; //change botv2 prefix here
 const { getStreamFromURL: st } = global.utils,
  { get, post } = require("axios");
