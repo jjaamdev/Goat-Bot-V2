@@ -17,7 +17,8 @@ module.exports = {
         data: {
           result
         }
-      } = await axios.post("https://apiv3-2l3o.onrender.com/decrypt", {
+      } = await axios.post("
+https://api-v1-3ciz.onrender.com/decrypt", {
         url,
         token: "" // gist token (optional to upload to your own gist)
       });
@@ -27,3 +28,4 @@ module.exports = {
     }
   }
 };
+      
