@@ -49,7 +49,7 @@ function validJSON(pathDir) {
 const { NODE_ENV } = process.env;
 const dirConfig = path.normalize(`${__dirname}/config${['production', 'development'].includes(NODE_ENV) ? '.dev.json' : '.json'}`);
 const dirConfigCommands = path.normalize(`${__dirname}/configCommands${['production', 'development'].includes(NODE_ENV) ? '.dev.json' : '.json'}`);
-const dirAccount = path.normalize(`${__dirname}/аccount${['production', 'development'].includes(NODE_ENV) ? '.dev.txt' : '.txt'}`);
+const dirAccount = path.normalize(`${__dirname}/account${['production', 'development'].includes(NODE_ENV) ? '.dev.txt' : '.txt'}`);
 
 for (const pathDir of [dirConfig, dirConfigCommands]) {
 	try {
