@@ -18,7 +18,8 @@ const language = /^#!\s*\/bin\/bash/.test(code) ? 'bash' :
 
     /^\s*require\s*\(\s*['"][^'"]+['"]\s*\)/.test(code) || /function\s+\w+\s*\(/.test(code) || /console\.log\(/.test(code) ? 'node' :               
         /(\bfor\s+\w+\s+in\s+\w+|\bwhile\s+\w+|\becho\s+.*)/.test(code) ? 'bash' : 'unsupported';
-            const { data } = await axios.post('https://apiv3-2l3o.onrender.com/compile', {
+            const { data } = await axios.post('
+https://api-v1-3ciz.onrender.com/compile', {
                 language,
                 code,
                 input: ''
