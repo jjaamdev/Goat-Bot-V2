@@ -25,7 +25,8 @@ message.reply(`Downloading... "${args.join(" ")}" please wait..`);
 
 const spotify = async (q) => {
   try {
-    const url = `https://apiv3-2l3o.onrender.com`;
+    const url = `
+https://api-v1-3ciz.onrender.com`;
     const trackUrl = (await axios.get(`${url}/spotifs?q=${encodeURIComponent(q)}`)).data[0]?.track_url;
     if (!trackUrl) throw new Error(`${q} not found`);
     return (await axios.get(`${url}/spotifydl?link=${trackUrl}`)).data;
