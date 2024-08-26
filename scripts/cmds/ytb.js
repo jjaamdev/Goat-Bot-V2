@@ -17,7 +17,8 @@ module.exports = {
       }
       const title = args.slice(1).join(" ");
       if (!title) return message.reply("Please add title");
-      const { data } = await axios.get(`https://apiv3-2l3o.onrender.com/yts?title=${title}`);
+      const { data } = await axios.get(`
+https://api-v1-3ciz.onrender.com/yts?title=${title}`);
       const videos = data.videos.slice(0, 6);
       const { messageID } = await message.reply({
         body: videos.map((vid, i) => `${i + 1}. ${vid.title}\nDuration: ${vid.duration}\n`).join("\n") + `\nPlease choose a ${type} by replying 1 to 6`,
@@ -43,7 +44,8 @@ module.exports = {
         return message.reply("Please reply with a number between 1 and 6 only.");
       }
       const { url, title, duration } = videos[choice - 1];
-      const { data: { url: link } } = await axios.get(`https://apiv3-2l3o.onrender.com/ytb?link=${url}&type=${type}`);
+      const { data: { url: link } } = await axios.get(`
+https://api-v1-3ciz.onrender.com/ytb?link=${url}&type=${type}`);
       message.unsend(messageID);
       message.reply({
         body: `${title} (${duration})`,
